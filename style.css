@@ -1,0 +1,95 @@
+html, body {
+	padding: 0; margin: 0;
+	text-align: center;	
+	font-family: 'Dosis', sans-serif;
+}
+
+#table {
+	display: inline-block;
+	padding: 3em 5em;
+	max-width: 50%;
+	background-color: #CECECE;
+	border-top: 10px solid #353535;
+	border-bottom: 10px solid #353535;
+}
+
+#weather {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-size: 2em;
+	padding: .8em 0;
+	color: #353535;
+	max-width: 50%;
+	margin: 1em auto 0;
+	border-top: 10px solid #353535; 
+}
+
+#country,
+#getApi {
+	text-align: center;
+}
+
+#country input {
+	padding: 7px;
+	margin: 3px;
+	border-radius: 5px;
+	border: 1.3px solid #353535;
+}
+
+#country input:focus {
+	outline-color: #D0A31A;
+}
+
+.fa {
+	color: #353535;
+}
+
+#details {
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0px 3px 3px 0;
+}
+
+#getApi span {
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 2px;
+	color: #353535;
+}
+
+#getApi {
+	text-align: left;
+	display: inline-block;
+	width: 50%;
+	float: left;
+	position: relative;
+	margin-top: 3px;
+}
+
+#get {
+	text-align: right;
+	display: inline-block;
+	width: 50%;
+	margin-top: 3px;
+}
+
+#get button {
+	padding: 2px 30px;
+	margin-right: 3px;
+	font-family: 'Dosis', sans-serif;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	border-radius: 5px;
+	border: 1.3px solid #353535;
+	background-color: #fff;
+	color: #353535;
+	cursor: pointer;
+	transition: all .25s ease-in-out;
+}
+
+#get button:hover {
+	background-color: #CECECE;
+	border-radius: 0;
+}

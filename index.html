@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Weather</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://use.fontawesome.com/69e9bead1c.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Dosis:200,400,700" rel="stylesheet">
+
+</head>
+<body>
+
+	<div id="weather">Weather</div>
+	<div id="table">
+		<div id="country">
+			<div><i class="fa fa-building fa-1x" aria-hidden="true"></i> <input id ="city" type="text" name="city" value="" placeholder="City"></div>
+			<div><i class="fa fa-globe fa-1x" aria-hidden="true"></i> <input id="code" type="text" name="countryCode" value="" placeholder="Country code (f.e. SK)"></div>
+		</div>
+
+		<div id="getApi">
+			<input id="details" type="checkbox" name="details" value=""> <span>Details</span>
+		</div>
+		<div id="get">
+			<button id="getBtn" type="submit">GET</button>
+		</div>
+	</div>
+
+	<script src="script/jquery-3.2.1.min.js"></script>
+	<script src="script/script.js"></script>
+</body>
+</html>
