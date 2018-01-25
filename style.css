@@ -1,49 +1,57 @@
 html, body {
 	padding: 0; margin: 0;
-	text-align: center;	
 	font-family: 'Dosis', sans-serif;
+}
+
+#wrapper {
+	text-align: center;	
+	padding: 40px 0;
 }
 
 #table {
 	display: inline-block;
-	padding: 3em 5em;
-	max-width: 50%;
-	background-color: #CECECE;
-	border-top: 10px solid #353535;
-	border-bottom: 10px solid #353535;
+	padding: 35px 0;
+	width: 500px;
+	background-color: #C7C7C7;
+	border-top: 2px solid #fff;
 }
 
 #weather {
-	color: #fff;
+	color: #353535;
+	background-color: #E9E9E9;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 3px;
 	font-size: 2em;
-	padding: .8em 0;
-	color: #353535;
-	max-width: 50%;
-	margin: 1em auto 0;
-	border-top: 10px solid #353535; 
-}
-
-#country,
-#getApi {
-	text-align: center;
+	padding: 35px 0;
+	margin: 0 auto;
+	width: 500px;
 }
 
 #country input {
-	padding: 7px;
-	margin: 3px;
+	padding: 8px;
+	margin: 4px 3px;
 	border-radius: 5px;
-	border: 1.3px solid #353535;
+	border: 1.3px solid #7C7C7C;
+	transition: all .25s ease-in-out;
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: .5px;
+	width: 200px;
+	color: #353535;
 }
 
 #country input:focus {
-	outline-color: #D0A31A;
+	outline-color: #353535;
+	border-radius: 0;
 }
 
 .fa {
-	color: #353535;
+	color: #fff;
+	text-shadow: 0 0 3px #000;
+}
+.fa-building:before,
+.fa-globe:before {
+	font-size: 1.2em;
 }
 
 #details {
@@ -52,44 +60,84 @@ html, body {
 	margin: 0px 3px 3px 0;
 }
 
-#getApi span {
+#detailsDiv span {
 	text-transform: uppercase;
 	font-size: 1em;
 	letter-spacing: 2px;
 	color: #353535;
 }
 
-#getApi {
-	text-align: left;
-	display: inline-block;
-	width: 50%;
-	float: left;
-	position: relative;
-	margin-top: 3px;
+#detailsDiv {
+	margin-top: 4px;
 }
 
-#get {
-	text-align: right;
-	display: inline-block;
-	width: 50%;
-	margin-top: 3px;
+#getDiv {
+	margin-top: 4px;
+
 }
 
-#get button {
-	padding: 2px 30px;
-	margin-right: 3px;
+#getDiv button {
+	width: 100px;
+	height: 28px;
+	line-height: 14px;
 	font-family: 'Dosis', sans-serif;
 	font-weight: bolder;
 	letter-spacing: 3px;
 	border-radius: 5px;
-	border: 1.3px solid #353535;
+	border: 1.3px solid #7C7C7C;
 	background-color: #fff;
-	color: #353535;
+	color: #7C7C7C;
 	cursor: pointer;
 	transition: all .25s ease-in-out;
 }
 
-#get button:hover {
+#getDiv button:hover {
 	background-color: #CECECE;
 	border-radius: 0;
+	color: #353535;
+	border: 1.3px solid #353535;
+}
+#getDiv button:focus {
+	outline-color: #353535;
+	border-radius: 0;
+}
+
+.weatherTable {
+	display: inline-block;
+	/*padding: 0;*/
+	width: 500px;
+	background-color: #ECECEC;
+	border-bottom: 2px solid #fff;
+}
+
+.weatherTable div:nth-child(2n-2){
+	background-color: #E5E5E5;
+}
+.weatherTable div:nth-child(1){
+	border-top: 0;
+}
+
+.weatherTable div {
+	height: 35px;
+	line-height: 35px;
+}
+
+.weatherTable span:first-child {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: right;
+	border-right: 1px solid #fff;
+	padding-right: 10px;
+}
+.weatherTable div span:nth-child(2n-2) {
+	border-left: 1px solid #fff;
+	letter-spacing: 1px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.weatherTable span {
+	display: inline-block;
+	width: 46.85%;
 }

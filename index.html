@@ -6,25 +6,27 @@
 	<title>Weather</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="mq.css">
 	<script src="https://use.fontawesome.com/69e9bead1c.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Dosis:200,400,700" rel="stylesheet">
 
 </head>
 <body>
+	<div id="wrapper">
+		
+		<div id="weather">Weather</div>
+		<div id="table">
+			<div id="country">
+				<div><i class="fa fa-building fa-1x" aria-hidden="true"></i> <input id ="city" type="text" name="city" value="" placeholder="City"></div>
+				<div><i class="fa fa-globe fa-1x" aria-hidden="true"></i> <input id="code" type="text" name="countryCode" value="" placeholder="Country code (e.g. SK)"></div>
+			</div>
+			
+			<div id="getDiv"><button id="getBtn" type="submit">GET</button></div>
+			<div id="detailsDiv"><input id="details" type="checkbox" name="details" value=""><span>Details</span></div>
 
-	<div id="weather">Weather</div>
-	<div id="table">
-		<div id="country">
-			<div><i class="fa fa-building fa-1x" aria-hidden="true"></i> <input id ="city" type="text" name="city" value="" placeholder="City"></div>
-			<div><i class="fa fa-globe fa-1x" aria-hidden="true"></i> <input id="code" type="text" name="countryCode" value="" placeholder="Country code (f.e. SK)"></div>
 		</div>
+		<div id="info"></div>
 
-		<div id="getApi">
-			<input id="details" type="checkbox" name="details" value=""> <span>Details</span>
-		</div>
-		<div id="get">
-			<button id="getBtn" type="submit">GET</button>
-		</div>
 	</div>
 
 	<script src="script/jquery-3.2.1.min.js"></script>
