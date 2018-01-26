@@ -141,3 +141,12 @@ html, body {
 	display: inline-block;
 	width: 46.85%;
 }
+
+.coord {
+	text-decoration: none;
+	color: #353535;
+}
+
+#error {
+	display: none;
+}

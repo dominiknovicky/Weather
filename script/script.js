@@ -17,18 +17,17 @@
 				url: urlLink,
 				data: {format: "json"},
 			error: function(){
-				//vypis chyby
+				$("#info").html("Error. No response from server! Please check the inputs!");
 			},
 			dataType: "json",
 			success: function(data){
-				console.log(data.main.temp-273.15+"°C");
-				console.log(data.weather[0].description);
+
 				$('#info').empty();
 	            var table=$("<div/>");
 	            table.addClass("weatherTable");
 
-	            var cityToUpper = city;
-	            var div=getLine('City',city.charAt(0).toUpperCase() + city.slice(1));
+	            var cityToUpper = city.toLowerCase();
+	            var div=getLine('City',city.charAt(0).toUpperCase() + cityToUpper.slice(1));
 	            table.append(div);
 
 	            var div=getLine('Country',data.sys.country);
@@ -62,6 +61,10 @@
 	              table.append(div);
 
 	              div=getLine("Sunset", new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes());
+	              table.append(div);
+
+	              div=getLine("Google Maps", "<a class='coord' target='_blank' href='https://www.google.com/maps/search/?api=1&query=" 
+	              	+ data.coord.lat + "," + data.coord.lon + "'>"+city.charAt(0).toUpperCase() + cityToUpper.slice(1)+"</a>");
 	              table.append(div);
             	}
    			},
